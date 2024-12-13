@@ -6,10 +6,10 @@ namespace AwesomeSocialMedia.Users.Application.Commands.SignUpUser
 {
     public class SignUpUserCommand : IRequest<BaseResult<Guid>>
     {
-        public string FullName { get; private set; }
-        public string DisplayName { get; private set; }
-        public DateTime BirthDate { get; private set; }
-        public string Email { get; private set; }
+        public string FullName { get; set; }
+        public string DisplayName { get; set; }
+        public DateTime BirthDate { get; set; }
+        public string Email { get; set; }
 
         public User ToEntity() => new User(FullName, DisplayName, BirthDate, Email);
     }

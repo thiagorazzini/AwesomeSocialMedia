@@ -17,7 +17,8 @@ namespace AwesomeSocialMedia.Users.Application.Commands.UpdateUser
         {
             var user = await _repository.GetByIdAsync(request.Id);
 
-            user.Update(request.DisplayName, 
+            user.Update(
+                request.DisplayName, 
                 request.Header, 
                 request.Description, 
                 request.Location.ToValueObject(), 

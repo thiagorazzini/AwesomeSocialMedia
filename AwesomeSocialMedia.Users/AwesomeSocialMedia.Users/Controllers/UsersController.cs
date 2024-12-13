@@ -28,7 +28,7 @@ namespace AwesomeSocialMedia.Users.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(SignUpUserCommand command)
+        public async Task<IActionResult> Post (SignUpUserCommand command)
         {
             var result = await _mediator.Send(command);
 

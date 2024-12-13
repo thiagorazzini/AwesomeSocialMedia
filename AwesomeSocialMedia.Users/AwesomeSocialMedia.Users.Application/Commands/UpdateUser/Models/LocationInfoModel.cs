@@ -4,9 +4,9 @@ namespace AwesomeSocialMedia.Users.Application.Commands.UpdateUser.Models
 {
     public class LocationInfoModel
     {
-        public string City { get; private set; }
-        public string State { get; private set; }
-        public string Country { get; private set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string Country { get; set; }
 
         public LocationInfo ToValueObject() => new LocationInfo(City, State, Country);
     }
